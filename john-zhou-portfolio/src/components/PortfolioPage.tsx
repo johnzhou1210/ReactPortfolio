@@ -1,5 +1,20 @@
-function PortfolioPage() {
-    return <>Portfolio</>
+import React from "react";
+
+interface PortfolioPageProps {
+  activeTab: string;
+  setActiveTab: (tab: string) => void;
 }
 
-export default PortfolioPage
+const PortfolioPage: React.FC<PortfolioPageProps> = ({
+  activeTab,
+  setActiveTab,
+}) => {
+  return (
+    <>
+      <button onClick={() => setActiveTab("home")}>Back</button>
+      <h1>Portfolio</h1>
+    </>
+  );
+};
+
+export default PortfolioPage;

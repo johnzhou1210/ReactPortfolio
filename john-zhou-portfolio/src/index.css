@@ -1,5 +1,36 @@
 @import "tailwindcss";
 
-.no-cursor {
-    cursor: default;
+@theme {
+    --breakpoint-xs: 0rem;
+    --breakpoint-2xl: 100rem;
+    --breakpoint-3xl: 120rem;
 }
+
+
+
+@keyframes typewriter {
+    from {
+      width: 0%;
+    }
+    to {
+      width: 100%;
+    }
+  }
+
+@keyframes blinkCursor {
+    from{
+        opacity: 50%;
+    } to {
+        opacity: 0;
+    }
+}  
+
+  
+.typewriter {
+    padding-left: 5%;
+    padding-top: 0.25%;
+    overflow: hidden; /* Ensures the text is hidden until the animation starts */
+    white-space: nowrap; /* Keeps the text on a single line */
+    animation: typewriter 4s steps(var(--steps)) 1s 1 normal both, infinite;
+    display: inline-block;
+  }
